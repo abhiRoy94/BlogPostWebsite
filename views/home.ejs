@@ -1,10 +1,12 @@
 <%- include('partials/header.ejs') %>
 
 <h1>Home</h1>
-
 <p> <%= homeContent %> </p>
 
-
+<% myPosts.forEach(function(post) { %>
+  <h2> <%= post.postTitle %> </h2>
+  <p> <%= post.postData %> </p>
+<% });  %>
 
 
 <%- include('partials/footer.ejs') %>
